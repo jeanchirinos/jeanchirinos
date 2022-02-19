@@ -1,0 +1,3 @@
+- 👋 Hi, I’m @jeanchirinos
+- 👀 I’m interested in ... Frontend Web Development
+- 🌱 I’m currently learning ... React js
