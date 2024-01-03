@@ -12,5 +12,11 @@
     "**/.project": true,
     "**/.settings": true
   },
-  "hide-files.files": []
+  "hide-files.files": [],
+  "prettier.documentSelectors": [
+    "**/*.astro"
+  ],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
