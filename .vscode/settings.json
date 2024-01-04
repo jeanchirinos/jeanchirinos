@@ -10,9 +10,26 @@
     "**/.classpath": true,
     "**/.factorypath": true,
     "**/.project": true,
-    "**/.settings": true
+    "**/.settings": true,
+    "dist": true,
+    ".astro": true,
+    "node_modules": true,
+    ".gitignore": true,
+    "README.md": true,
+    "yarn.lock": true,
+    "src/env.d.ts": true,
+    ".prettierrc.mjs": true
   },
-  "hide-files.files": [],
+  "hide-files.files": [
+    "dist",
+    ".astro",
+    "node_modules",
+    ".gitignore",
+    "README.md",
+    "yarn.lock",
+    "src/env.d.ts",
+    ".prettierrc.mjs"
+  ],
   "prettier.documentSelectors": [
     "**/*.astro"
   ],

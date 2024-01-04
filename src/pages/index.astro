@@ -1,18 +1,10 @@
 ---
-import { Image } from 'astro:assets'
+import About from '@components/About.astro'
 import Layout from '../layouts/Layout.astro'
-import ImgProfile from '@assets/images/profile.webp'
 ---
 
 <Layout title='Jean Chirinos | Portafolio'>
   <main class='mx-auto flex w-[900px] max-w-full flex-col items-center gap-y-8 py-20'>
-    <section>
-      <header class='space-y-4'>
-        <Image src={ImgProfile} alt='Jean Chirinos' loading='eager' class='w-48 rounded-full' />
-
-        <h2 class='text-3xl font-extrabold'>Jean Chirinos</h2>
-      </header>
-      <!-- <Icon name='mdi:github' /> -->
-    </section>
+    <About />
   </main>
 </Layout>
