@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '../../layouts/Layout.astro'
+import projects from '../../data/projects.json'
+
+export function getStaticPaths() {
+  const data = projects.map(project => {
+    return {
+      params: {
+        id: project.id,
+      },
+    }
+  })
+
+  return data
+}
+
+const { id } = Astro.params
+
+const images = import.meta.glob('../../assets/**')
+---
+
+<Layout>
+  <div class='flex min-h-screen items-center justify-center'>
+    <!--@ts-ignore -->
+    <Image src={images[`../../assets/images/projects/${id}.webp`]()} alt='' transition:name={id} />
+  </div>
+</Layout>

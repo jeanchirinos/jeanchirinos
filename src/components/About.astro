@@ -4,7 +4,7 @@ import ImgProfile from '@assets/images/profile.webp'
 import { Icon } from 'astro-icon/components'
 ---
 
-<section id='sobre_mi' class='scroll-mt-20 space-y-8'>
+<section id='sobre_mi' class='flex scroll-mt-20 flex-col items-center gap-y-8'>
   <header class='flex flex-col items-center gap-y-4 text-center'>
     <Image src={ImgProfile} alt='Jean Chirinos' loading='eager' class='w-48 rounded-full' />
 
@@ -12,7 +12,9 @@ import { Icon } from 'astro-icon/components'
       <h2 class='text-3xl font-extrabold'>Jean Chirinos</h2>
       <h3 class='text-lg'>Desarrollador web</h3>
     </section>
-    <section class='flex gap-x-5 text-lg *:flex *:items-center *:gap-x-1.5'>
+    <section
+      class='flex flex-wrap justify-center gap-x-5 gap-y-3 text-lg *:flex *:items-center *:gap-x-1.5'
+    >
       <article>
         <Icon name='technologies/nextjs' color='black' />
         <span>Next.js</span>
@@ -38,7 +40,7 @@ import { Icon } from 'astro-icon/components'
       <p>Especializado en el desarrollo de aplicaciones web de calidad.</p>
     </section>
     <section
-      class='flex gap-x-5 text-lg text-neutral-400 *:flex *:items-center *:gap-x-1.5 *:rounded-lg *:border *:border-neutral-500 *:px-3.5 *:py-0.5 hover:*:bg-white/5'
+      class='flex flex-wrap justify-center gap-x-5 gap-y-3 text-lg text-neutral-400 *:flex *:items-center *:gap-x-1.5 *:rounded-lg *:border *:border-neutral-500 *:px-3.5 *:py-0.5 hover:*:bg-white/5'
     >
       <a href='https://www.linkedin.com/in/jeanchirinos/' target='_blank'>
         <Icon name='mdi:linkedin' />

@@ -1,12 +1,15 @@
 html {
   color-scheme: dark;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   scrollbar-gutter: stable;
   @apply text-neutral-200;
 }
 
 button,
 a {
-  /* @apply transition-transform hover:scale-[1.025]; */
   @apply transition-transform active:scale-[0.975];
+}
+
+h4 {
+  @apply text-2xl font-bold;
 }

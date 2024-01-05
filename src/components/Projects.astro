@@ -1,0 +1,54 @@
+---
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+import projects from 'src/data/projects.json'
+
+const images = import.meta.glob('../assets/**')
+---
+
+<section id='proyectos' class='scroll-mt-20 space-y-6 self-center'>
+  <h4>Proyectos</h4>
+
+  <section class='grid gap-5 sm:grid-cols-2'>
+    {
+      projects.map(project => (
+        <article class='space-y-4 rounded-md bg-[#545454]/5 px-6 py-4'>
+          <p class='text-xl font-bold mb-2'>{project.name}</p>
+
+          <a href={`/proyecto/${project.id}`}>
+            <!--@ts-ignore -->
+            <Image
+              src={images[`../assets/images/projects/${project.id}.webp`]()}
+              alt=''
+              transition:name={project.id}
+            />
+          </a>
+
+          <footer class='flex items-center justify-between gap-x-2'>
+            <div class='flex gap-x-4'>
+              {project.technologies.map(technology => (
+                <Icon
+                  name={`technologies/${technology}`}
+                  title={technology.at(0)?.toUpperCase() + technology.slice(1)}
+                />
+              ))}
+            </div>
+            <aside class='hover:*:bg-white/5 *:rounded-md *:px-2 *:py-1 flex text-xl'>
+              <a href={project.web} target='_blank' aria-label='Web' title='Ir a la web'>
+                <Icon name='mdi:web' />
+              </a>
+              <a
+                href={project.github}
+                target='_blank'
+                aria-label='Github'
+                title='Ir al repositorio'
+              >
+                <Icon name='mdi:github' />
+              </a>
+            </aside>
+          </footer>
+        </article>
+      ))
+    }
+  </section>
+</section>
