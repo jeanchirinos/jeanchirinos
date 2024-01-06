@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets'
 import Layout from 'src/layouts/Layout.astro'
 import projects from 'src/data/projects.json'
+import Metadata from '@/components/Metadata.astro'
 
 export function getStaticPaths() {
   const data = projects.map(project => {
@@ -28,6 +29,16 @@ const { project } = Astro.props
 ---
 
 <Layout>
+  <!-- publishedTime={project.date.toISOString()} -->
+  <Metadata
+    slot='head'
+    title={project.name}
+    description={''}
+    image={`${import.meta.env.SITE}/proyecto/${project.id}/og.png`}
+    canonicalUrl={`${import.meta.env.SITE}/proyecto/${project.id}/`}
+    type='proyecto'
+  />
+
   <div class='flex min-h-screen items-center justify-center'>
     <Image src={project.image} alt={project.name} transition:name={project.id} />
   </div>

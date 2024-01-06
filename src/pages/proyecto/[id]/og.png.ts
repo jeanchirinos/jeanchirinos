@@ -11,17 +11,9 @@ interface Props {
 export async function GET({ props }: Props) {
   const { project } = props;
 
-  // const myImage = await project.image;
-
-  // const cover = fs.readFileSync(
-  //   myImage.default.src.replace(/\?.*/, "").replace("/@fs", "").slice(3),
-  // ).buffer;
-
-  const imageBuffer = fs.readFileSync(
+  const image = fs.readFileSync(
     `./src/assets/images/projects/${project.id}.png`,
-  );
-
-  const image = Uint8Array.from(imageBuffer).buffer;
+  ).buffer;
 
   // Astro doesn't support tsx endpoints so usign React-element objects
   const html = {
@@ -125,19 +117,12 @@ export async function GET({ props }: Props) {
 
 export function getStaticPaths() {
   const data = projects.map((project) => {
-    const images = import.meta.glob<{ default: ImageMetadata }>(
-      "../../../assets/**",
-    );
-
     return {
       params: {
         id: project.id,
       },
       props: {
-        project: {
-          ...project,
-          image: images[`../../../assets/images/projects/${project.id}.png`](),
-        },
+        project,
       },
     };
   });

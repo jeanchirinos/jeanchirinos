@@ -20,6 +20,7 @@ const { title } = Astro.props
     <meta name='generator' content={Astro.generator} />
     <title>{title ?? 'Jean Chirinos | Portafolio'}</title>
     <ViewTransitions />
+    <slot name='head' />
   </head>
   <body class='px-4'>
     <Header />

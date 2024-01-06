@@ -8,6 +8,7 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [tailwind(), icon(), react()],
   image: {
-    service: passthroughImageService()
-  }
+    service: passthroughImageService(),
+  },
+  site: "https://jeanchirinos.vercel.app",
 });
