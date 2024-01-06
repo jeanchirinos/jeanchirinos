@@ -4,26 +4,31 @@ import Layout from 'src/layouts/Layout.astro'
 import projects from 'src/data/projects.json'
 
 export function getStaticPaths() {
-  const data = projects.map(project => ({
-    params: {
-      id: project.id,
-    },
-  }))
+  const data = projects.map(project => {
+    const images = import.meta.glob<{ default: ImageMetadata }>('../../assets/**')
+
+    return {
+      params: {
+        id: project.id,
+      },
+      props: {
+        project: {
+          ...project,
+          image: images[`../../assets/images/projects/${project.id}.webp`](),
+        },
+      },
+    }
+  })
 
   return data
 }
 
-const { id } = Astro.params
-
-const images = import.meta.glob<{ default: ImageMetadata }>('../../assets/**')
-
-const imageSrc = images[`../../assets/images/projects/${id}.webp`]()
-
-const project = projects.find(project => project.id === id)!
+// const { id } = Astro.params
+const { project } = Astro.props
 ---
 
 <Layout>
   <div class='flex min-h-screen items-center justify-center'>
-    <Image src={imageSrc} alt={project.name} transition:name={id} />
+    <Image src={project.image} alt={project.name} transition:name={project.id} />
   </div>
 </Layout>
