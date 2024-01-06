@@ -3,7 +3,7 @@ import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets'
 import projects from 'src/data/projects.json'
 
-const images = import.meta.glob('../assets/**')
+const images = import.meta.glob<{ default: ImageMetadata }>('../assets/**')
 ---
 
 <section id='proyectos' class='scroll-mt-20 space-y-6 self-center'>
@@ -13,10 +13,9 @@ const images = import.meta.glob('../assets/**')
     {
       projects.map(project => (
         <article class='space-y-4 rounded-md bg-[#545454]/5 px-6 py-4'>
-          <p class='text-xl font-bold mb-2'>{project.name}</p>
+          <p class='mb-2 text-xl font-bold'>{project.name}</p>
 
           <a href={`/proyecto/${project.id}`}>
-            <!--@ts-ignore -->
             <Image
               src={images[`../assets/images/projects/${project.id}.webp`]()}
               alt=''
@@ -33,7 +32,7 @@ const images = import.meta.glob('../assets/**')
                 />
               ))}
             </div>
-            <aside class='hover:*:bg-white/5 *:rounded-md *:px-2 *:py-1 flex text-xl'>
+            <aside class='flex text-xl *:rounded-md *:px-2 *:py-1 hover:*:bg-white/5'>
               <a href={project.web} target='_blank' aria-label='Web' title='Ir a la web'>
                 <Icon name='mdi:web' />
               </a>

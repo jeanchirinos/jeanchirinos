@@ -2,6 +2,8 @@
 import { Image } from 'astro:assets'
 import ImgProfile from '@assets/images/profile.webp'
 import { Icon } from 'astro-icon/components'
+import { CopyButton } from './CopyButton'
+import personalInfo from 'src/data/personalInfo.json'
 ---
 
 <section id='sobre_mi' class='flex scroll-mt-20 flex-col items-center gap-y-8'>
@@ -9,8 +11,8 @@ import { Icon } from 'astro-icon/components'
     <Image src={ImgProfile} alt='Jean Chirinos' loading='eager' class='w-48 rounded-full' />
 
     <section>
-      <h2 class='text-3xl font-extrabold'>Jean Chirinos</h2>
-      <h3 class='text-lg'>Desarrollador web</h3>
+      <h2 class='text-3xl font-extrabold'>{personalInfo.name}</h2>
+      <h3 class='text-lg'>{personalInfo.occupation}</h3>
     </section>
     <section
       class='flex flex-wrap justify-center gap-x-5 gap-y-3 text-lg *:flex *:items-center *:gap-x-1.5'
@@ -42,54 +44,25 @@ import { Icon } from 'astro-icon/components'
     <section
       class='flex flex-wrap justify-center gap-x-5 gap-y-3 text-lg text-neutral-400 *:flex *:items-center *:gap-x-1.5 *:rounded-lg *:border *:border-neutral-500 *:px-3.5 *:py-0.5 hover:*:bg-white/5'
     >
-      <a href='https://www.linkedin.com/in/jeanchirinos/' target='_blank'>
+      <a href={personalInfo.links.linkedin} target='_blank'>
         <Icon name='mdi:linkedin' />
         Linkedin
       </a>
-      <a href='https://github.com/jeanchirinos' target='_blank'>
+      <a href={personalInfo.links.github} target='_blank'>
         <Icon name='mdi:github' />
         Github
       </a>
-      <a href='#'>
+      <a href={personalInfo.links.cv}>
         <Icon name='mdi:file' />
         Ver CV
       </a>
     </section>
 
-    <button
-      id='copy-email-btn'
-      class='relative mx-auto flex items-center gap-x-2 overflow-hidden rounded-lg bg-white px-5 py-2 text-black shadow-md shadow-white/50 transition-all hover:bg-zinc-100'
-    >
-      <Icon name='mdi:email' />
-      <span>jeanchirinos17@gmail.com</span>
-
-      <!-- Copied success -->
-      <div
-        id='copied-show-badge'
-        class='pointer-events-none absolute inset-0 hidden size-full items-center justify-center gap-x-2 bg-white'
-      >
-        <Icon name='mdi:check-circle' />
-        <span>Copiado!</span>
-      </div>
-    </button>
+    <div>
+      <CopyButton client:load>
+        <Icon name='mdi:email' slot='emailIcon' />
+        <Icon name='mdi:check-circle' slot='checkIcon' />
+      </CopyButton>
+    </div>
   </footer>
 </section>
-
-<script>
-  //@ts-ignore
-  import confetti from 'canvas-confetti'
-
-  const button = document.getElementById('copy-email-btn')
-  const copied = document.getElementById('copied-show-badge')
-
-  button?.addEventListener('click', () => {
-    navigator.clipboard.writeText(button?.innerText)
-    confetti()
-
-    copied?.classList.replace('hidden', 'flex')
-
-    setTimeout(() => {
-      copied?.classList.replace('flex', 'hidden')
-    }, 1000)
-  })
-</script>
