@@ -5,18 +5,18 @@ import personalInfo from "src/data/personalInfo.json";
 
 interface Props {
   params: { id: string };
-  props: { project: (typeof projects)[0] & { image: any } };
+  props: { project: (typeof projects)[0] };
 }
 
-export async function GET({ props }: Props) {
-  const { project } = props;
+export async function GET(props: Props) {
+  const { project } = props.props;
 
   const image = fs.readFileSync(
     `./src/assets/images/projects/${project.id}.png`,
   ).buffer;
 
   // Astro doesn't support tsx endpoints so usign React-element objects
-  const html = {
+  const html: any = {
     type: "div",
     props: {
       children: [
@@ -97,35 +97,21 @@ export async function GET({ props }: Props) {
     },
   };
 
-  return new ImageResponse(html as any, {
+  return new ImageResponse(html, {
     width: 1200,
     height: 600,
-    // fonts: [
-    //   {
-    //     name: "DM Sans Bold",
-    //     data: DmSansBold.buffer,
-    //     style: "normal",
-    //   },
-    //   {
-    //     name: "DM Sans Regular",
-    //     data: DmSansReqular.buffer,
-    //     style: "normal",
-    //   },
-    // ],
   });
 }
 
 export function getStaticPaths() {
-  const data = projects.map((project) => {
-    return {
-      params: {
-        id: project.id,
-      },
-      props: {
-        project,
-      },
-    };
-  });
+  const data = projects.map((project) => ({
+    params: {
+      id: project.id,
+    },
+    props: {
+      project,
+    },
+  }));
 
   return data;
 }
