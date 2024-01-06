@@ -15,7 +15,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('../assets/**')
         <article class='space-y-4 rounded-md bg-[#545454]/5 px-6 py-4'>
           <p class='mb-2 text-xl font-bold'>{project.name}</p>
 
-          <a href={`/proyecto/${project.id}`}>
+          <a href={project.web} target='_blank' aria-label='Ir a la web'>
             <Image
               src={images[`../assets/images/projects/${project.id}.webp`]()}
               alt=''
@@ -33,8 +33,12 @@ const images = import.meta.glob<{ default: ImageMetadata }>('../assets/**')
               ))}
             </div>
             <aside class='flex text-xl *:rounded-md *:px-2 *:py-1 hover:*:bg-white/5'>
-              <a href={project.web} target='_blank' aria-label='Web' title='Ir a la web'>
-                <Icon name='mdi:web' />
+              <a
+                href={`/proyecto/${project.id}`}
+                aria-label='Más información'
+                title='Más información'
+              >
+                <Icon name='mdi:info' />
               </a>
               <a
                 href={project.github}
