@@ -18,6 +18,7 @@
     "@iconify-json/mdi": "^1.1.64",
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
+    "@vercel/og": "^0.6.2",
     "astro": "^4.1.1",
     "astro-icon": "^1.0.2",
     "canvas-confetti": "^1.9.2",
