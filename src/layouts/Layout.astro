@@ -2,25 +2,24 @@
 import Header from '@components/Header.astro'
 import '../globals.css'
 import { ViewTransitions } from 'astro:transitions'
+import Metadata from '@/components/Metadata.astro'
 
 interface Props {
   title?: string
+  description?: string
+  image?: string
 }
-
-const { title } = Astro.props
 ---
 
 <!doctype html>
 <html lang='es'>
   <head>
     <meta charset='UTF-8' />
-    <meta name='description' content='Portafolio de Jean Chirinos, Desarrollador Web' />
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
-    <title>{title ?? 'Jean Chirinos | Portafolio'}</title>
+    <Metadata {...Astro.props} />
     <ViewTransitions />
-    <slot name='head' />
   </head>
   <body class='px-4'>
     <Header />
