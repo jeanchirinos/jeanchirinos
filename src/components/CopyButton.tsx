@@ -6,7 +6,7 @@ import { useState } from "react";
 const { email } = personalInfo;
 
 type Props = {
-  emailIcon?: any;
+  copyIcon?: any;
   checkIcon?: any;
 };
 
@@ -26,21 +26,21 @@ export function CopyButton(props: Props) {
   return (
     <button
       onClick={copy}
-      className="relative mx-auto flex items-center gap-x-2 overflow-hidden rounded-lg bg-white px-5 py-2 text-black shadow-md shadow-white/50 transition-all hover:bg-zinc-100"
+      className="relative mx-auto flex items-center gap-x-2 overflow-hidden rounded-lg border border-transparent bg-white px-5 py-2 text-black  transition-all hover:border-white hover:bg-transparent hover:text-white"
     >
       <div
         className={`${
           isCopied && "opacity-0"
         } flex items-center justify-center gap-x-2`}
       >
-        <span>{props.emailIcon}</span>
         <span>{email}</span>
+        <span>{props.copyIcon}</span>
       </div>
 
       {isCopied && (
         <div className="pointer-events-none absolute inset-0 flex size-full items-center justify-center gap-x-2">
-          <span>{props.checkIcon}</span>
           <span>Copiado!</span>
+          <span>{props.checkIcon}</span>
         </div>
       )}
     </button>

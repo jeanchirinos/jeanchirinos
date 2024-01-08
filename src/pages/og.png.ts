@@ -6,43 +6,6 @@ import { createElement } from "react";
 export async function GET() {
   const profile = fs.readFileSync("./src/assets/images/profile.jpg").buffer;
 
-  // const html0 = createElement(
-  //   "div",
-  //   {
-  //     tw: "flex w-full h-full justify-center items-center bg-[#121212]",
-  //     style: {
-  //       gap: "4rem",
-  //     },
-  //   },
-  //   createElement("img", {
-  //     tw: "w-44 rounded-full",
-  //     src: profile,
-  //   }),
-  //   createElement(
-  //     "div",
-  //     {
-  //       tw: "flex flex-col",
-  //       style: {
-  //         gap: "1rem",
-  //       },
-  //     },
-  //     createElement(
-  //       "span",
-  //       {
-  //         tw: "text-7xl font-bold text-white",
-  //       },
-  //       personalInfo.name,
-  //     ),
-  //     createElement(
-  //       "span",
-  //       {
-  //         tw: "text-5xl text-[#e5e5e5]",
-  //       },
-  //       personalInfo.occupation,
-  //     ),
-  //   ),
-  // );
-
   const html = createElement("main", {
     tw: "flex w-full h-full justify-center items-center bg-[#121212]",
     style: {

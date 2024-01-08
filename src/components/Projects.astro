@@ -1,22 +1,56 @@
 ---
 import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets'
-import projects from 'src/data/projects.json'
+import { projects } from 'src/data/projects'
+import technologies from 'src/data/technologies.json'
 
 const images = import.meta.glob<{ default: ImageMetadata }>('../assets/**')
+
+const techColors = {
+  [technologies.astro.id]: 'bg-astro/20 border-astro',
+  [technologies.nextjs.id]: 'bg-nextjs/20 border-nextjs',
+  [technologies.react.id]: 'bg-react/20 border-react',
+  [technologies.styledcomponents.id]: 'bg-styledcomponents/20 border-styledcomponents',
+  [technologies.tailwindcss.id]: 'bg-tailwindcss/20 border-tailwindcss',
+  [technologies.typescript.id]: 'bg-typescript/20 border-typescript',
+}
 ---
 
 <section id='proyectos' class='scroll-mt-20 space-y-6 self-center'>
   <h4>Proyectos</h4>
 
-  <section class='grid gap-5 sm:grid-cols-2'>
+  <section class='grid gap-5 md:grid-cols-2'>
     {
       projects.map(project => (
-        <article class='space-y-4 rounded-md bg-[#545454]/5 px-6 py-4'>
-          <p class='mb-2 text-xl font-bold'>{project.name}</p>
+        <article class='flex flex-col justify-between gap-y-4 rounded-md border border-neutral-800 bg-[#1B1B1B]/80 px-5 py-4'>
+          <header class='flex items-start justify-between gap-x-2'>
+            <div class='space-y-2'>
+              <p class='text-xl font-bold'>{project.name}</p>
+              <p class='text-sm'>{project.description}</p>
+            </div>
+            <a
+              href={project.github}
+              target='_blank'
+              aria-label='Github'
+              title='Ir al repositorio'
+              class='rounded-md p-3 text-2xl hover:bg-white/5'
+            >
+              <Icon name='mdi:github' />
+            </a>
+          </header>
 
-          <a href={project.web} target='_blank' aria-label='Ir a la web'>
+          <a
+            href={project.web}
+            target='_blank'
+            aria-label='Ir a la web'
+            class='group relative overflow-hidden rounded-md'
+          >
+            <Icon
+              name='mdi:open-in-new'
+              class='absolute right-3 top-3 z-10 rounded-md text-neutral-500 opacity-0 backdrop-blur-md group-hover:opacity-100'
+            />
             <Image
+              class='transition-all duration-300 group-hover:scale-[1.02]'
               src={images[`../assets/images/projects/${project.id}.webp`]()}
               alt=''
               transition:name={project.id}
@@ -24,31 +58,20 @@ const images = import.meta.glob<{ default: ImageMetadata }>('../assets/**')
           </a>
 
           <footer class='flex items-center justify-between gap-x-2'>
-            <div class='flex gap-x-4'>
-              {project.technologies.map(technology => (
-                <Icon
-                  name={`technologies/${technology}`}
-                  title={technology.at(0)?.toUpperCase() + technology.slice(1)}
-                />
+            <div class='flex gap-x-2'>
+              {project.technologies.map(tech => (
+                <div
+                  title={tech.name}
+                  class:list={[
+                    'flex items-center gap-x-1.5 rounded-full border px-2 py-0.5',
+                    techColors[tech.id as keyof typeof techColors],
+                  ]}
+                >
+                  <Icon name={`technologies/${tech.id}`} />
+                  <span class='text-sm'>{tech.short_name}</span>
+                </div>
               ))}
             </div>
-            <aside class='flex text-xl *:rounded-md *:px-2 *:py-1 hover:*:bg-white/5'>
-              <a
-                href={`/proyecto/${project.id}`}
-                aria-label='Más información'
-                title='Más información'
-              >
-                <Icon name='mdi:info' />
-              </a>
-              <a
-                href={project.github}
-                target='_blank'
-                aria-label='Github'
-                title='Ir al repositorio'
-              >
-                <Icon name='mdi:github' />
-              </a>
-            </aside>
           </footer>
         </article>
       ))

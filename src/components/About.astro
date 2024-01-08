@@ -18,7 +18,7 @@ import personalInfo from 'src/data/personalInfo.json'
       class='flex flex-wrap justify-center gap-x-5 gap-y-3 text-lg *:flex *:items-center *:gap-x-1.5'
     >
       <article>
-        <Icon name='technologies/nextjs' color='black' />
+        <Icon name='technologies/nextjs' />
         <span>Next.js</span>
       </article>
       <article>
@@ -52,7 +52,7 @@ import personalInfo from 'src/data/personalInfo.json'
         <Icon name='mdi:github' />
         Github
       </a>
-      <a href={personalInfo.links.cv}>
+      <a href={personalInfo.links.cv} target='_blank'>
         <Icon name='mdi:file' />
         Ver CV
       </a>
@@ -60,8 +60,8 @@ import personalInfo from 'src/data/personalInfo.json'
 
     <div>
       <CopyButton client:load>
-        <Icon name='mdi:email' slot='emailIcon' />
-        <Icon name='mdi:check-circle' slot='checkIcon' />
+        <Icon name='mdi:content-copy' slot='copyIcon' />
+        <Icon name='mdi:check' slot='checkIcon' />
       </CopyButton>
     </div>
   </footer>

@@ -1,11 +1,11 @@
 {
   "name": "Jean Chirinos",
-  "occupation": "Desarrollador Web",
+  "occupation": "Desarrollador Frontend",
   "email": "JeanChirinos17@gmail.com",
   "links": {
     "linkedin": "https://www.linkedin.com/in/jeanchirinos",
     "github": "https://github.com/jeanchirinos",
-    "cv": "#"
+    "cv": "https://drive.google.com/file/d/1YbpxcqNcVldT8ZmAPLYE7hHaF8IeIxNI/view?usp=sharing"
   },
   "main_technologies": ["nextjs", "react", "typescript", "tailwindcss"]
 }

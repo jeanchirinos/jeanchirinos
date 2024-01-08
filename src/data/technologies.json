@@ -1,0 +1,32 @@
+{
+  "astro": {
+    "id": "astro",
+    "name": "Astro",
+    "short_name": "astro"
+  },
+  "nextjs": {
+    "id": "nextjs",
+    "name": "Next.js",
+    "short_name": "Next.js"
+  },
+  "react": {
+    "id": "react",
+    "name": "React",
+    "short_name": "React"
+  },
+  "styledcomponents": {
+    "id": "styledcomponents",
+    "name": "Styled Components",
+    "short_name": "Styled C."
+  },
+  "tailwindcss": {
+    "id": "tailwindcss",
+    "name": "Tailwind Css",
+    "short_name": "Tailwind CSS"
+  },
+  "typescript": {
+    "id": "typescript",
+    "name": "Typescript",
+    "short_name": "Typescript"
+  }
+}
