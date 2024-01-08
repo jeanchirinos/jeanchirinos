@@ -1,6 +1,6 @@
 import technologies from "./technologies.json";
 
-const { astro, nextjs, react, styledcomponents, typescript } = technologies;
+const { astro, react, styledcomponents, typescript } = technologies;
 
 export const projects = [
   {

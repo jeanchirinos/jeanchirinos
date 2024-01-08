@@ -6,13 +6,13 @@ import { CopyButton } from './CopyButton'
 import personalInfo from 'src/data/personalInfo.json'
 ---
 
-<section id='sobre_mi' class='flex scroll-mt-20 flex-col items-center gap-y-8'>
+<section id='sobre_mi' class='flex scroll-mt-20 flex-col items-center gap-y-12'>
   <header class='flex flex-col items-center gap-y-4 text-center'>
     <Image src={ImgProfile} alt='Jean Chirinos' loading='eager' class='w-48 rounded-full' />
 
     <section>
-      <h2 class='text-3xl font-extrabold'>{personalInfo.name}</h2>
-      <h3 class='text-lg'>{personalInfo.occupation}</h3>
+      <h2 class='text-3xl font-extrabold text-white'>{personalInfo.name}</h2>
+      <h3 class='text-lg text-neutral-100'>{personalInfo.occupation}</h3>
     </section>
     <section
       class='flex flex-wrap justify-center gap-x-5 gap-y-3 text-lg *:flex *:items-center *:gap-x-1.5'
@@ -36,33 +36,35 @@ import personalInfo from 'src/data/personalInfo.json'
     </section>
   </header>
 
-  <footer class='space-y-6'>
+  <footer class='space-y-10'>
     <section class='max-w-prose'>
       <p>+2 años de experiencia. {personalInfo.occupation}. De Lima, Perú.</p>
       <p>Especializado en el desarrollo de aplicaciones web de calidad.</p>
     </section>
-    <section
-      class='flex flex-wrap justify-center gap-x-5 gap-y-3 text-lg text-neutral-400 *:flex *:items-center *:gap-x-1.5 *:rounded-lg *:border *:border-neutral-500 *:px-3.5 *:py-0.5 hover:*:bg-white/5'
-    >
-      <a href={personalInfo.links.linkedin} target='_blank'>
-        <Icon name='mdi:linkedin' />
-        Linkedin
-      </a>
-      <a href={personalInfo.links.github} target='_blank'>
-        <Icon name='mdi:github' />
-        Github
-      </a>
-      <a href={personalInfo.links.cv} target='_blank'>
-        <Icon name='mdi:file' />
-        Ver CV
-      </a>
-    </section>
+    <section class='space-y-6'>
+      <div
+        class='flex flex-wrap justify-center gap-x-5 gap-y-3 text-lg text-neutral-400 *:flex *:items-center *:gap-x-1.5 *:rounded-lg *:border *:border-neutral-500 *:px-3.5 *:py-0.5 hover:*:bg-white/5'
+      >
+        <a href={personalInfo.links.linkedin} target='_blank'>
+          <Icon name='mdi:linkedin' />
+          Linkedin
+        </a>
+        <a href={personalInfo.links.github} target='_blank'>
+          <Icon name='mdi:github' />
+          Github
+        </a>
+        <a href={personalInfo.links.cv} target='_blank'>
+          <Icon name='mdi:file' />
+          Ver CV
+        </a>
+      </div>
 
-    <div>
-      <CopyButton client:load>
-        <Icon name='mdi:content-copy' slot='copyIcon' />
-        <Icon name='mdi:check' slot='checkIcon' />
-      </CopyButton>
-    </div>
+      <div>
+        <CopyButton client:load>
+          <Icon name='mdi:content-copy' slot='copyIcon' />
+          <Icon name='mdi:check' slot='checkIcon' />
+        </CopyButton>
+      </div>
+    </section>
   </footer>
 </section>

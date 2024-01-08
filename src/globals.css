@@ -1,7 +1,7 @@
 html {
   color-scheme: dark;
   /* scroll-behavior: smooth; */
-  @apply text-neutral-200;
+  @apply text-neutral-300;
 }
 
 button,
@@ -10,5 +10,5 @@ a {
 }
 
 h4 {
-  @apply text-2xl font-bold;
+  @apply text-2xl font-bold text-white;
 }

@@ -16,7 +16,7 @@ const techColors = {
 }
 ---
 
-<section id='proyectos' class='scroll-mt-20 space-y-6 self-center'>
+<section id='proyectos' class='scroll-mt-20 space-y-8 self-center'>
   <h4>Proyectos</h4>
 
   <section class='grid gap-5 md:grid-cols-2'>
@@ -25,7 +25,7 @@ const techColors = {
         <article class='flex flex-col justify-between gap-y-4 rounded-md border border-neutral-800 bg-[#1B1B1B]/80 px-5 py-4'>
           <header class='flex items-start justify-between gap-x-2'>
             <div class='space-y-2'>
-              <p class='text-xl font-bold'>{project.name}</p>
+              <p class='text-xl font-bold text-neutral-200'>{project.name}</p>
               <p class='text-sm'>{project.description}</p>
             </div>
             <a
@@ -68,7 +68,7 @@ const techColors = {
                   ]}
                 >
                   <Icon name={`technologies/${tech.id}`} />
-                  <span class='text-sm'>{tech.short_name}</span>
+                  <span class='text-sm text-neutral-200'>{tech.short_name}</span>
                 </div>
               ))}
             </div>
