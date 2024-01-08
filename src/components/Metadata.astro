@@ -1,4 +1,6 @@
 ---
+import personalInfo from 'src/data/personalInfo.json'
+
 interface Props {
   title?: string
   description?: string
@@ -7,10 +9,10 @@ interface Props {
 
 const { title, description, image = '/og.png' } = Astro.props
 
-const defaultTitle = 'Jean Chirinos - Portafolio'
+const defaultTitle = `${personalInfo.name} - Portafolio`
 const myTitle = title ? `${title} | ${defaultTitle}` : defaultTitle
 
-const defaultDescription = 'Portafolio de Jean Chirinos, Desarrollador Web'
+const defaultDescription = `Portafolio de ${personalInfo.name}, ${personalInfo.occupation}`
 const myDescription = description ? `${description}. ${defaultDescription}` : defaultDescription
 
 const myImage = `${import.meta.env.SITE}${image}`
