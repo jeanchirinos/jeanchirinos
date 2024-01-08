@@ -1,7 +1,6 @@
 html {
   color-scheme: dark;
   /* scroll-behavior: smooth; */
-  scrollbar-gutter: stable;
   @apply text-neutral-200;
 }
 
