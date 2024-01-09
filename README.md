@@ -19,8 +19,4 @@
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-## Estadísticas
-
 <img alt="Top de lenguajes de Jean" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=jeanchirinos&langs_count=4&layout=compact&theme=react&border_color=22272E&bg_color=22272E&title_color=FFFFFF&icon_color=F8D866" height="200px" width="400px"/>
-
-![Gráfico de Jean](https://github-readme-activity-graph.vercel.app/graph?username=jeanchirinos&custom_title=Gráfico%20de%20actividad%20en%20Github&bg_color=22272E&color=transparent&line=7F3FBF&point=7F3FBF&area_color=FFFFFF&title_color=FFFFFF&area=true)
