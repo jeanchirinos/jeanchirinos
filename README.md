@@ -1,21 +1,4 @@
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?lines=Bievenido&center=true&width=380&height=45">
-</p>
-
-<!-- Intro  -->
-<h3 align="center">
-  Jean Chirinos
-</h3>
-
-<p align="center"> 
-  <samp>
-    「 Desarrollador Frontend 」
-    <br>
-    <br>
-  </samp>
-</p>
-
-<p align="center">
  <a href="https://jeanchirinos.vercel.app/" target="blank">
   <img src="https://img.shields.io/badge/Website-DC143C?style=for-the-badge&logo=medium&logoColor=white" alt="jeanchirinos" />
  </a>
