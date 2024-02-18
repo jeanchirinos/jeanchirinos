@@ -62,7 +62,7 @@ const techColors = {
   </a>
 
   <footer class='flex items-center justify-between gap-x-2'>
-    <div class='flex gap-x-2'>
+    <div class='flex max-w-full gap-x-2 overflow-x-auto'>
       {
         technologies.map(tech => (
           <div
@@ -73,7 +73,7 @@ const techColors = {
             ]}
           >
             <Icon name={`technologies/${tech.id}`} />
-            <span class='text-sm text-neutral-200'>{tech.short_name}</span>
+            <span class='w-max text-sm text-neutral-200'>{tech.short_name}</span>
           </div>
         ))
       }

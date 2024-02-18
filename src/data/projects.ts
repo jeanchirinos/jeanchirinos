@@ -1,6 +1,6 @@
 import technologies from "./technologies.json";
 
-const { react, styledcomponents, typescript, nextjs, tailwindcss } =
+const { nextjs, react, typescript, tailwindcss, styledcomponents } =
   technologies;
 
 export const projects = [

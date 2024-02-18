@@ -9,7 +9,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('../assets/**')
 <section id='proyectos' class='scroll-mt-20 space-y-8 self-center'>
   <h4>Proyectos</h4>
 
-  <section class='grid gap-5 md:grid-cols-2'>
+  <section class='grid grid-cols-1 gap-5 md:grid-cols-2'>
     {
       projects.map((project, i) => (
         <Project {...project} index={i}>
