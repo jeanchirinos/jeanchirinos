@@ -1,0 +1,82 @@
+---
+import { Icon } from 'astro-icon/components'
+import technologiesData from '@/data/technologies.json'
+
+interface Props {
+  name: string
+  description: string
+  github: string
+  web: string
+  technologies: {
+    id: string
+    name: string
+    short_name: string
+  }[]
+  index: number
+}
+
+const { name, description, github, web, technologies, index } = Astro.props
+
+const techColors = {
+  [technologiesData.astro.id]: 'bg-astro/20 border-astro',
+  [technologiesData.nextjs.id]: 'bg-nextjs/20 border-nextjs',
+  [technologiesData.react.id]: 'bg-react/20 border-react',
+  [technologiesData.styledcomponents.id]: 'bg-styledcomponents/20 border-styledcomponents',
+  [technologiesData.tailwindcss.id]: 'bg-tailwindcss/20 border-tailwindcss',
+  [technologiesData.typescript.id]: 'bg-typescript/20 border-typescript',
+}
+---
+
+<article
+  class={`flex flex-col justify-between gap-y-4 rounded-md border border-neutral-800 bg-[#1B1B1B]/80 px-5 py-4 ${
+    index === 0 && 'md:col-span-2'
+  }`}
+>
+  <header class='flex items-start justify-between gap-x-2'>
+    <div class='space-y-2'>
+      <p class='text-xl font-bold text-neutral-200'>{name}</p>
+      <p class='text-sm'>{description}</p>
+    </div>
+    <a
+      href={github}
+      target='_blank'
+      aria-label='Github'
+      title='Ir al repositorio'
+      class='rounded-md p-3 text-2xl hover:bg-white/5'
+    >
+      <Icon name='mdi:github' />
+    </a>
+  </header>
+
+  <a
+    href={web}
+    target='_blank'
+    aria-label='Ir a la web'
+    class='group relative overflow-hidden rounded-md'
+  >
+    <Icon
+      name='mdi:open-in-new'
+      class='absolute right-3 top-3 z-10 rounded-md text-neutral-500 opacity-0 backdrop-blur-md group-hover:opacity-100'
+    />
+    <slot />
+  </a>
+
+  <footer class='flex items-center justify-between gap-x-2'>
+    <div class='flex gap-x-2'>
+      {
+        technologies.map(tech => (
+          <div
+            title={tech.name}
+            class:list={[
+              'flex items-center gap-x-1.5 rounded-full border px-2 py-0.5',
+              techColors[tech.id as keyof typeof techColors],
+            ]}
+          >
+            <Icon name={`technologies/${tech.id}`} />
+            <span class='text-sm text-neutral-200'>{tech.short_name}</span>
+          </div>
+        ))
+      }
+    </div>
+  </footer>
+</article>

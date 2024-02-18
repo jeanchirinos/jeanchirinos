@@ -1,8 +1,17 @@
 import technologies from "./technologies.json";
 
-const { astro, react, styledcomponents, typescript } = technologies;
+const { react, styledcomponents, typescript, nextjs, tailwindcss } =
+  technologies;
 
 export const projects = [
+  {
+    id: "main_project",
+    name: "Petcontrado",
+    web: "https://encuentratumascota.nijui.com/",
+    github: "https://github.com/jeanchirinos",
+    technologies: [nextjs, react, typescript, tailwindcss],
+    description: "Encuentra, reporta y adopta mascotas",
+  },
   {
     id: "gunbound_emotes",
     name: "Gunbound Emotes",
@@ -26,13 +35,5 @@ export const projects = [
     github: "https://github.com/jeanchirinos/simple-js",
     technologies: [react, styledcomponents],
     description: "Prototipo de compilador de JavaScript",
-  },
-  {
-    id: "portfafolio_ehsan",
-    name: "Portfolio Ehsan",
-    web: "https://ehsan-portfolio-design.vercel.app/",
-    github: "https://github.com/jeanchirinos/ehsan-portfolio-design",
-    technologies: [astro],
-    description: "Desarrollo de diseño de un portafolio",
   },
 ];

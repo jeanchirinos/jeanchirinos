@@ -21,7 +21,7 @@
   },
   "tailwindcss": {
     "id": "tailwindcss",
-    "name": "Tailwind Css",
+    "name": "Tailwind CSS",
     "short_name": "Tailwind CSS"
   },
   "typescript": {

@@ -1,6 +1,6 @@
 html {
   color-scheme: dark;
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
   @apply text-neutral-300;
 }
 
