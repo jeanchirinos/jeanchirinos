@@ -16,7 +16,9 @@
     ".gitignore": true,
     "src/env.d.ts": true,
     ".prettierrc.mjs": true,
-    "README.md": true
+    "README.md": true,
+    "yarn.lock": true,
+    "node_modules": true
   },
   "hide-files.files": [
     "dist",
@@ -24,7 +26,9 @@
     ".gitignore",
     "src/env.d.ts",
     ".prettierrc.mjs",
-    "README.md"
+    "README.md",
+    "yarn.lock",
+    "node_modules"
   ],
   "prettier.documentSelectors": [
     "**/*.astro"
