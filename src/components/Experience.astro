@@ -1,21 +1,30 @@
 ---
 import { Icon } from 'astro-icon/components'
+import ExperienceItem from './ExperienceItem.astro'
+import { Image } from 'astro:assets'
+import LogoOngJuventudGlobalizada from '../assets/images/jobs/JuventudGlobalizada.png'
 ---
 
 <section id='experiencia' class='w-[435px] max-w-full scroll-mt-20 space-y-8 self-center'>
   <h4>Experiencia Laboral</h4>
 
-  <article class='flex gap-x-2.5'>
-    <div class='pt-2'><Icon name='binarial' size={24} /></div>
-    <section class='flex flex-col'>
-      <header>
-        <h5 class='text-lg text-neutral-100'>Desarrollador Frontend</h5>
-        <p class='text-neutral-200'>Binarial</p>
-        <p class='text-neutral-400'>2022 - 2024</p>
-      </header>
-      <p class='max-w-prose text-pretty'>
-        Desarrollo de landings y una aplicación web de inversiones inmobiliarias
-      </p>
-    </section>
-  </article>
+  <div class='space-y-10'>
+    <ExperienceItem
+      job='Desarrollador Frontend'
+      company='Binarial'
+      date='2022 - 2024'
+      description='Desarrollo de landings y una aplicación web de inversiones inmobiliarias'
+    >
+      <div slot='logo' class='pt-2'><Icon name='binarial' size={24} /></div>
+    </ExperienceItem>
+
+    <ExperienceItem
+      job='Desarrollador Frontend Voluntario'
+      company='ONG Juventud Globalizada'
+      date='2021'
+      description='Maquetación e implementación de landings web'
+    >
+      <Image slot='logo' src={LogoOngJuventudGlobalizada} alt='ONG Juventud Globalizada' />
+    </ExperienceItem>
+  </div>
 </section>

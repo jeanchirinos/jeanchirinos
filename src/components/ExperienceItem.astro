@@ -1,0 +1,24 @@
+---
+interface Props {
+  job: string
+  company: string
+  date: string
+  description: string
+}
+
+const { job, company, date, description } = Astro.props
+---
+
+<article class='flex items-start gap-x-2.5'>
+  <slot name='logo' />
+  <section class='flex flex-col'>
+    <header>
+      <h5 class='text-lg text-neutral-100'>{job}</h5>
+      <p class='text-neutral-300'>{company}</p>
+      <p class='text-neutral-400'>{date}</p>
+    </header>
+    <p class='max-w-prose text-pretty'>
+      {description}
+    </p>
+  </section>
+</article>

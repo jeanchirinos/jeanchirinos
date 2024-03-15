@@ -1,6 +1,6 @@
 import technologies from "./technologies.json";
 
-const { nextjs, react, typescript, tailwindcss, styledcomponents } =
+const { nextjs, react, typescript, tailwindcss, styledcomponents, astro } =
   technologies;
 
 export const projects = [
@@ -8,7 +8,7 @@ export const projects = [
     id: "main_project",
     name: "Petcontrado",
     web: "https://encuentratumascota.nijui.com/",
-    github: "https://github.com/jeanchirinos",
+    github: "https://github.com/jeanchirinos/FindYourPet-Frontend",
     technologies: [nextjs, react, typescript, tailwindcss],
     description: "Encuentra, reporta y adopta mascotas",
   },
@@ -19,6 +19,14 @@ export const projects = [
     github: "https://github.com/jeanchirinos/emotes-gunbound",
     technologies: [react, typescript, styledcomponents],
     description: "Sonidos de emotes del juego Gunbound",
+  },
+  {
+    id: "solar_system",
+    name: "Sistema Solar",
+    web: "https://solar-system-woad-nine.vercel.app/",
+    github: "https://github.com/jeanchirinos/solar_system",
+    technologies: [astro, react],
+    description: "Información de planetas utilizando View Transitions",
   },
   {
     id: "foxbel_music",
