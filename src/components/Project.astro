@@ -34,7 +34,7 @@ const techColors = {
 >
   <header class='flex items-start justify-between gap-x-2'>
     <div class='space-y-2'>
-      <p class='text-xl font-bold text-neutral-200'>{name}</p>
+      <p translate='no' class='text-xl font-bold text-neutral-200'>{name}</p>
       <p class='text-sm'>{description}</p>
     </div>
     <a
@@ -73,7 +73,9 @@ const techColors = {
             ]}
           >
             <Icon name={`technologies/${tech.id}`} />
-            <span class='w-max text-sm text-neutral-200'>{tech.short_name}</span>
+            <span translate='no' class='w-max text-sm text-neutral-200'>
+              {tech.short_name}
+            </span>
           </div>
         ))
       }

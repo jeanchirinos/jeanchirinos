@@ -6,9 +6,39 @@ import Projects from '@components/Projects.astro'
 ---
 
 <Layout>
-  <main class='mx-auto flex w-[900px] max-w-full flex-col gap-y-20 py-20'>
+  <main class='mx-auto flex w-[900px] max-w-full flex-col gap-y-20 pb-2'>
     <About />
     <Experience />
     <Projects />
   </main>
 </Layout>
+
+<script is:inline>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: '',
+        includedLanguages: 'es,en',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+        autoDisplay: false,
+        gaTrack: false,
+        // property to avoid appearing a message box when hovering over the text with the original language
+        gaId: '',
+      },
+      'google_translate_element',
+    )
+  }
+</script>
+
+<script
+  is:inline
+  type='text/javascript'
+  src='https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit'></script>
+
+<script is:inline>
+  window.addEventListener('load', () => {
+    var div = document.querySelector('.skiptranslate.goog-te-gadget')
+    div.replaceChildren(div.childNodes[0])
+  })
+</script>

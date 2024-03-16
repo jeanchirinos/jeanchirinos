@@ -12,3 +12,20 @@ a {
 h4 {
   @apply text-2xl font-bold text-white;
 }
+
+/* GOOGLE TRANSLATE */
+body > .skiptranslate {
+  display: none;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+.goog-te-combo {
+  @apply !m-0 rounded-md py-1 pl-0.5 text-white;
+}

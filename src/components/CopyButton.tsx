@@ -1,6 +1,6 @@
 import confetti from "canvas-confetti";
 import personalInfo from "../data/personalInfo.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const { email } = personalInfo;
 
@@ -11,6 +11,34 @@ type Props = {
 
 export function CopyButton(props: Props) {
   const [isCopied, setIsCopied] = useState(false);
+
+  // const googleTranslateElementInit = () => {
+  //   new window.google.translate.TranslateElement(
+  //     {
+  //       pageLanguage: "es",
+  //       autoDisplay: false,
+  //       includedLanguages: "en,es",
+  //       layout:
+  //         window.google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+  //     },
+  //     "google_translate_element",
+  //   );
+
+  //   const div = document.querySelector(".skiptranslate.goog-te-gadget");
+
+  //   div?.replaceChildren(div.childNodes[0]);
+  // };
+
+  // useEffect(() => {
+  //   const addScript = document.createElement("script");
+  //   addScript.setAttribute(
+  //     "src",
+  //     "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit",
+  //   );
+  //   document.body.appendChild(addScript);
+
+  //   window.googleTranslateElementInit = googleTranslateElementInit;
+  // }, []);
 
   function copy() {
     setIsCopied(true);

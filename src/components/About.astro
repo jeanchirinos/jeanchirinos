@@ -11,29 +11,31 @@ import personalInfo from 'src/data/personalInfo.json'
     <Image src={ImgProfile} alt='Jean Chirinos' loading='eager' class='w-48 rounded-full' />
 
     <section>
-      <h2 class='text-3xl font-extrabold text-white'>{personalInfo.name}</h2>
-      <h3 class='text-lg text-neutral-100'>{personalInfo.occupation}</h3>
+      <h2 class='text-3xl font-extrabold text-white' aria-label='Mi nombre'>{personalInfo.name}</h2>
+      <h3 class='text-lg text-neutral-100' aria-label='Ocupación'>{personalInfo.occupation}</h3>
     </section>
-    <section
+    <ul
+      aria-label='Tecnologías que domino'
       class='flex flex-wrap justify-center gap-x-5 gap-y-3 text-lg *:flex *:items-center *:gap-x-1.5'
+      translate='no'
     >
-      <article>
+      <li>
         <Icon name='technologies/nextjs' />
         <span>Next.js</span>
-      </article>
-      <article>
+      </li>
+      <li>
         <Icon name='technologies/react' />
         <span>React</span>
-      </article>
-      <article>
+      </li>
+      <li>
         <Icon name='technologies/typescript' />
         <span>Typescript</span>
-      </article>
-      <article>
+      </li>
+      <li>
         <Icon name='technologies/tailwindcss' />
         <span>Tailwind CSS</span>
-      </article>
-    </section>
+      </li>
+    </ul>
   </header>
 
   <footer class='space-y-10'>
@@ -42,22 +44,22 @@ import personalInfo from 'src/data/personalInfo.json'
       <p>Especializado en el desarrollo de aplicaciones web de calidad.</p>
     </section>
     <section class='space-y-6'>
-      <div
+      <ul
         class='flex flex-wrap justify-center gap-x-5 gap-y-3 text-lg text-neutral-400 *:flex *:items-center *:gap-x-1.5 *:rounded-lg *:border *:border-neutral-500 *:px-3.5 *:py-0.5 hover:*:bg-white/5'
       >
         <a href={personalInfo.links.linkedin} target='_blank'>
           <Icon name='mdi:linkedin' />
-          Linkedin
+          LinkedIn
         </a>
         <a href={personalInfo.links.github} target='_blank'>
           <Icon name='mdi:github' />
-          Github
+          GitHub
         </a>
         <a href={personalInfo.links.cv} target='_blank'>
           <Icon name='mdi:file' />
           Ver CV
         </a>
-      </div>
+      </ul>
 
       <div>
         <CopyButton client:load>
