@@ -23,6 +23,7 @@ import Projects from '@components/Projects.astro'
       'google_translate_element',
     )
 
+    // Remove the powered by Google logo
     const gadget = document.querySelector('.skiptranslate.goog-te-gadget')
     gadget.replaceChildren(gadget.childNodes[0])
   }
