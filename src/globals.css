@@ -14,16 +14,12 @@ h4 {
 }
 
 /* GOOGLE TRANSLATE */
-body > .skiptranslate {
-  display: none;
-}
-
-.goog-te-banner-frame.skiptranslate {
-  display: none !important;
-}
-
 body {
-  top: 0px !important;
+  @apply !top-0;
+}
+
+body > .skiptranslate {
+  @apply hidden;
 }
 
 .goog-te-combo {
