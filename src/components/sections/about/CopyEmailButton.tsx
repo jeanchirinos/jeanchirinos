@@ -38,7 +38,7 @@ export function CopyButton(props: Props) {
 
       {isCopied && (
         <div className="pointer-events-none absolute inset-0 flex size-full items-center justify-center gap-x-2">
-          <span>Copiado!</span>
+          <span>¡Copiado!</span>
           <span>{props.checkIcon}</span>
         </div>
       )}
