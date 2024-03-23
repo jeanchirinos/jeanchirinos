@@ -1,0 +1,39 @@
+<section class='mb-10 flex h-[17px] justify-center'>
+  <span id='google_translate_element'></span>
+</section>
+
+<script is:inline>
+  function googleTranslateElementInit() {
+    google.translate.TranslateElement(
+      {
+        includedLanguages: 'es,en',
+      },
+      'google_translate_element',
+    )
+
+    // Remove the powered by Google logo
+    const googleGadget = document.querySelector('.skiptranslate.goog-te-gadget')
+    googleGadget.replaceChildren(googleGadget.childNodes[0])
+  }
+</script>
+
+<script
+  is:inline
+  src='https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit'></script>
+
+<style is:global>
+  /* Hides google top bar when changing language */
+  body {
+    @apply !top-0;
+  }
+
+  body > .skiptranslate {
+    @apply hidden;
+  }
+
+  /* Styles the google translate dropdown */
+  .goog-te-combo {
+    @apply !m-0 rounded-md py-1 pl-0.5 text-white;
+  }
+</style>

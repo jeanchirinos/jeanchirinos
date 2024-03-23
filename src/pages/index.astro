@@ -1,35 +1,18 @@
 ---
-import About from '@components/About.astro'
+import About from '@/components/sections/about/About.astro'
 import Layout from '../layouts/Layout.astro'
-import Experience from '@components/Experience.astro'
-import Projects from '@components/Projects.astro'
+import Experience from '@/components/sections/experience/Experience.astro'
+import Projects from '@/components/sections/projects/Projects.astro'
+import Header from '@/components/sections/Header.astro'
+import GoogleTranslate from '@/components/sections/GoogleTranslate.astro'
 ---
 
 <Layout>
+  <Header />
+  <GoogleTranslate />
   <main class='mx-auto flex w-[900px] max-w-full flex-col gap-y-20 pb-2'>
     <About />
     <Experience />
     <Projects />
   </main>
 </Layout>
-
-<!-- GOOGLE TRANSLATE -->
-<script is:inline>
-  function googleTranslateElementInit() {
-    google.translate.TranslateElement(
-      {
-        includedLanguages: 'es,en',
-      },
-      'google_translate_element',
-    )
-
-    // Remove the powered by Google logo
-    const gadget = document.querySelector('.skiptranslate.goog-te-gadget')
-    gadget.replaceChildren(gadget.childNodes[0])
-  }
-</script>
-
-<script
-  is:inline
-  src='https://translate.google.com/translate_a/element.js?
-cb=googleTranslateElementInit'></script>

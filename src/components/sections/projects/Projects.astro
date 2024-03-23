@@ -3,7 +3,7 @@ import { Image } from 'astro:assets'
 import { projects } from 'src/data/projects'
 import Project from './Project.astro'
 
-const images = import.meta.glob<{ default: ImageMetadata }>('../assets/**')
+const images = import.meta.glob<{ default: ImageMetadata }>('../../../assets/**')
 ---
 
 <section id='proyectos' class='scroll-mt-20 space-y-8 self-center'>
@@ -20,7 +20,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('../assets/**')
           ) : (
             <Image
               class='transition-all duration-300 group-hover:scale-[1.02]'
-              src={images[`../assets/images/projects/${project.id}.webp`]()}
+              src={images[`../../../assets/images/projects/${project.id}.webp`]()}
               alt=''
             />
           )}

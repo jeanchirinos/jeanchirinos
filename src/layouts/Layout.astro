@@ -1,5 +1,4 @@
 ---
-import Header from '@components/Header.astro'
 import '../globals.css'
 import Metadata from '@/components/Metadata.astro'
 
@@ -20,7 +19,6 @@ interface Props {
     <Metadata {...Astro.props} />
   </head>
   <body class='px-4'>
-    <Header />
     <slot />
   </body>
 </html>

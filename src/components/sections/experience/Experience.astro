@@ -2,7 +2,7 @@
 import { Icon } from 'astro-icon/components'
 import ExperienceItem from './ExperienceItem.astro'
 import { Image } from 'astro:assets'
-import LogoOngJuventudGlobalizada from '../assets/images/jobs/JuventudGlobalizada.png'
+import LogoOngJuventudGlobalizada from '@/assets/images/jobs/JuventudGlobalizada.png'
 ---
 
 <section id='experiencia' class='w-[435px] max-w-full scroll-mt-20 space-y-8 self-center'>
@@ -15,7 +15,7 @@ import LogoOngJuventudGlobalizada from '../assets/images/jobs/JuventudGlobalizad
       date='2022 - 2024'
       description='Desarrollo de landings y una aplicación web de inversiones inmobiliarias'
     >
-      <div slot='logo' class='pt-2'><Icon name='binarial' size={24} /></div>
+      <span slot='logo' class='pt-2'><Icon name='binarial' size={24} /></span>
     </ExperienceItem>
 
     <ExperienceItem

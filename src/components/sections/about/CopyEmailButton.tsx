@@ -1,5 +1,5 @@
 import confetti from "canvas-confetti";
-import personalInfo from "../data/personalInfo.json";
+import personalInfo from "../../../data/personalInfo.json";
 import { useState } from "react";
 
 const { email } = personalInfo;

@@ -16,8 +16,8 @@
     ".gitignore": true,
     "README.md": true,
     "src/env.d.ts": true,
-    "node_modules": true,
-    ".prettierrc.mjs": true
+    ".prettierrc.mjs": true,
+    "node_modules": true
   },
   "hide-files.files": [
     "dist",
@@ -25,8 +25,8 @@
     ".gitignore",
     "README.md",
     "src/env.d.ts",
-    "node_modules",
-    ".prettierrc.mjs"
+    ".prettierrc.mjs",
+    "node_modules"
   ],
   "prettier.documentSelectors": [
     "**/*.astro"

@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        astro: "rgba(255, 93, 1, 1)",
         nextjs: "#000000",
-        react: "rgba(97, 218, 251, 1)",
-        styledcomponents: "#FFD459",
-        tailwindcss: "rgba(38, 194, 254, 1)",
+        react: "#61DAFB",
         typescript: "#3178C6",
+        tailwindcss: "#26C2FE",
+        astro: "#FF5D5D",
+        styledcomponents: "#FFD459",
       },
     },
   },
