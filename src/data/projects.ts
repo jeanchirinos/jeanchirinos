@@ -7,7 +7,7 @@ export const projects = [
   {
     id: "main_project",
     name: "Petcontrado",
-    web: "https://encuentratumascota.nijui.com/",
+    web: "https://petcontrado.nijui.com/",
     github: "https://github.com/jeanchirinos/FindYourPet-Frontend",
     technologies: [nextjs, react, typescript, tailwindcss],
     description: "Encuentra, reporta y adopta mascotas",
