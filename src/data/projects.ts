@@ -3,7 +3,16 @@ import technologies from "./technologies.json";
 const { nextjs, react, typescript, tailwindcss, styledcomponents, astro } =
   technologies;
 
-export const projects = [
+export type Project = {
+  id: string;
+  name: string;
+  web: string;
+  github: string;
+  technologies: (typeof technologies)[keyof typeof technologies][];
+  description: string;
+};
+
+export const projects: Project[] = [
   {
     id: "main_project",
     name: "Petcontrado",
@@ -14,7 +23,7 @@ export const projects = [
   },
   {
     id: "gunbound_emotes",
-    name: "Gunbound Emotes",
+    name: "Gunbound emotes",
     web: "https://emotes-gunbound.vercel.app/",
     github: "https://github.com/jeanchirinos/emotes-gunbound",
     technologies: [react, typescript, styledcomponents],
@@ -22,15 +31,16 @@ export const projects = [
   },
   {
     id: "solar_system",
-    name: "Sistema Solar",
+    name: '<span translate="yes">Sistema solar</span>',
     web: "https://solar-system-woad-nine.vercel.app/",
     github: "https://github.com/jeanchirinos/solar_system",
     technologies: [astro, react],
-    description: "Información de planetas utilizando View Transitions",
+    description:
+      '<span><span>Información de planetas utilizando</span> <span translate="no">View Transitions</span></span>',
   },
   {
     id: "foxbel_music",
-    name: "Foxbel Music",
+    name: "Foxbel music",
     web: "https://foxbel-music-seven.vercel.app/",
     github: "https://github.com/jeanchirinos/Foxbel-Music",
     technologies: [react, typescript, styledcomponents],

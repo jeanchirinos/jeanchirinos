@@ -1,21 +1,16 @@
 ---
+import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
 import technologiesData from '@/data/technologies.json'
+import type { Project } from '@/data/projects'
 
 interface Props {
-  name: string
-  description: string
-  github: string
-  web: string
-  technologies: {
-    id: string
-    name: string
-    short_name: string
-  }[]
+  project: Project
   index: number
 }
 
-const { name, description, github, web, technologies, index } = Astro.props
+const { project, index } = Astro.props
+const { id, name, description, github, web, technologies } = project
 
 const techColors = {
   [technologiesData.astro.id]: 'bg-astro/20 border-astro',
@@ -25,6 +20,8 @@ const techColors = {
   [technologiesData.tailwindcss.id]: 'bg-tailwindcss/20 border-tailwindcss',
   [technologiesData.typescript.id]: 'bg-typescript/20 border-typescript',
 }
+
+const images = import.meta.glob<{ default: ImageMetadata }>('../../../assets/**')
 ---
 
 <article
@@ -34,8 +31,9 @@ const techColors = {
 >
   <header class='flex items-start justify-between gap-x-2'>
     <div class='space-y-2'>
-      <p translate='no' class='text-xl font-bold text-neutral-200'>{name}</p>
-      <p class='text-sm'>{description}</p>
+      <p translate='no' class='text-xl font-bold text-neutral-200' set:html={name} />
+
+      <p class='text-sm' set:html={description} />
     </div>
     <a
       href={github}
@@ -58,7 +56,20 @@ const techColors = {
       name='mdi:open-in-new'
       class='absolute right-3 top-3 z-10 rounded-md text-neutral-500 opacity-0 backdrop-blur-md group-hover:opacity-100'
     />
-    <slot />
+
+    {
+      index === 0 ? (
+        <video autoplay loop muted playsinline preload='metadata' class='object-cover'>
+          <source src='/videos/main_project.mp4' type='video/mp4' />
+        </video>
+      ) : (
+        <Image
+          class='transition-all duration-300 group-hover:scale-[1.02]'
+          src={images[`../../../assets/images/projects/${id}.webp`]()}
+          alt=''
+        />
+      )
+    }
   </a>
 
   <footer class='flex items-center justify-between gap-x-2'>

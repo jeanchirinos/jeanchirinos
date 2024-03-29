@@ -1,31 +1,12 @@
 ---
-import { Image } from 'astro:assets'
-import { projects } from 'src/data/projects'
+import { projects } from '@/data/projects'
 import Project from './Project.astro'
-
-const images = import.meta.glob<{ default: ImageMetadata }>('../../../assets/**')
 ---
 
 <section id='proyectos' class='scroll-mt-20 space-y-8 self-center'>
   <h4>Proyectos</h4>
 
   <section class='grid grid-cols-1 gap-5 md:grid-cols-2'>
-    {
-      projects.map((project, i) => (
-        <Project {...project} index={i}>
-          {i === 0 ? (
-            <video autoplay loop muted playsinline preload='metadata' class='object-cover'>
-              <source src='/videos/main_project.mp4' type='video/mp4' />
-            </video>
-          ) : (
-            <Image
-              class='transition-all duration-300 group-hover:scale-[1.02]'
-              src={images[`../../../assets/images/projects/${project.id}.webp`]()}
-              alt=''
-            />
-          )}
-        </Project>
-      ))
-    }
+    {projects.map((project, i) => <Project project={project} index={i}></Project>)}
   </section>
 </section>
