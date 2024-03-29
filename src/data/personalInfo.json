@@ -5,7 +5,7 @@
   "links": {
     "linkedin": "https://www.linkedin.com/in/jeanchirinos",
     "github": "https://github.com/jeanchirinos",
-    "cv": "https://drive.google.com/file/d/1S_rZZImeSsvds8o14PFqo36GBdhVTYo3/view?usp=sharing"
+    "cv": "/CV Jean Chirinos.pdf"
   },
   "main_technologies": ["nextjs", "react", "typescript", "tailwindcss"]
 }

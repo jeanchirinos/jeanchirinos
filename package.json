@@ -16,22 +16,22 @@
     "@astrojs/react": "^3.1.0",
     "@astrojs/tailwind": "^5.1.0",
     "@iconify-json/mdi": "^1.1.64",
-    "@types/react": "^18.2.69",
-    "@types/react-dom": "^18.2.21",
+    "@types/react": "^18.2.73",
+    "@types/react-dom": "^18.2.23",
     "@vercel/og": "^0.6.2",
-    "astro": "^4.5.9",
+    "astro": "^4.5.12",
     "astro-icon": "^1.0.2",
     "canvas-confetti": "^1.9.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.33.3",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.3"
   },
   "devDependencies": {
     "@types/canvas-confetti": "^1.6.4",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
-    "prettier-plugin-tailwindcss": "^0.5.12",
+    "prettier-plugin-tailwindcss": "^0.5.13",
     "typescript": "^5.4.3"
   }
 }
