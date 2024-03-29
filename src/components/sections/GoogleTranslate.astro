@@ -1,3 +1,7 @@
+---
+import personalInfo from 'src/data/personalInfo.json'
+---
+
 <section class='mb-10 flex h-[17px] justify-center'>
   <span id='google_translate_element'></span>
 </section>
@@ -14,6 +18,29 @@
     // Remove the powered by Google logo
     const googleGadget = document.querySelector('.skiptranslate.goog-te-gadget')
     googleGadget.replaceChildren(googleGadget.childNodes[0])
+
+    // Update resume link based on language selected
+    const languageOptionSelect = document.querySelector('.goog-te-combo')
+
+    function handleLanguageChange(languageSelected) {
+      const linkSeeCv = document.getElementById('link_see_cv')
+
+      if (languageSelected === 'es') {
+        linkSeeCv.href = '/CV Jean Chirinos.pdf'
+      } else {
+        linkSeeCv.href = '/Resume Jean Chirinos.pdf'
+      }
+    }
+
+    // Listen for language changes
+    languageOptionSelect.addEventListener('change', e => handleLanguageChange(e.target.value))
+
+    // Set the initial file if needed
+    setTimeout(() => {
+      if (languageOptionSelect.value !== '') {
+        handleLanguageChange(languageOptionSelect.value)
+      }
+    }, [500])
   }
 </script>
 
