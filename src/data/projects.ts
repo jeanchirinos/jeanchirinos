@@ -34,7 +34,7 @@ export const projects: Project[] = [
     name: '<span translate="yes">Sistema solar</span>',
     web: "https://solar-system-woad-nine.vercel.app/",
     github: "https://github.com/jeanchirinos/solar_system",
-    technologies: [astro, react],
+    technologies: [astro, react, tailwindcss],
     description:
       '<span><span>Información de planetas utilizando</span> <span translate="no">View Transitions</span></span>',
   },
