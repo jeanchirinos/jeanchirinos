@@ -22,6 +22,14 @@ export const projects: Project[] = [
     description: "Encuentra, reporta y adopta mascotas",
   },
   {
+    id: "clc",
+    name: "Cobro de luz compartido",
+    web: "https://cobrodeluzcompartida.vercel.app/",
+    github: "https://github.com/jeanchirinos/cobrodeluzcompartida",
+    technologies: [nextjs, typescript, tailwindcss],
+    description: "Calcula el cobro de luz compartido entre inquilinos",
+  },
+  {
     id: "gunbound_emotes",
     name: "Gunbound emotes",
     web: "https://emotes-gunbound.vercel.app/",
