@@ -10,6 +10,8 @@ export default {
         tailwindcss: "#26C2FE",
         astro: "#FF5D5D",
         styledcomponents: "#FFD459",
+        nest: "#EA2845",
+        swagger: "#85EA2D",
       },
     },
   },

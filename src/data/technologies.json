@@ -28,5 +28,15 @@
     "id": "typescript",
     "name": "Typescript",
     "short_name": "Typescript"
+  },
+  "nest": {
+    "id": "nest",
+    "name": "NestJs",
+    "short_name": "NestJs"
+  },
+  "swagger": {
+    "id": "swagger",
+    "name": "Swagger",
+    "short_name": "Swagger"
   }
 }

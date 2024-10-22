@@ -1,7 +1,15 @@
 import technologies from "./technologies.json";
 
-const { nextjs, react, typescript, tailwindcss, styledcomponents, astro } =
-  technologies;
+const {
+  nextjs,
+  react,
+  typescript,
+  tailwindcss,
+  styledcomponents,
+  astro,
+  nest,
+  swagger,
+} = technologies;
 
 export type Project = {
   id: string;
@@ -61,5 +69,13 @@ export const projects: Project[] = [
     github: "https://github.com/jeanchirinos/simple-js",
     technologies: [react, styledcomponents],
     description: "Prototipo de compilador de JavaScript",
+  },
+  {
+    id: "nestjs_posts_app",
+    name: "NesJS Posts App",
+    web: "https://nestjs-posts-app.onrender.com/api-docs",
+    github: "https://github.com/jeanchirinos/nestjs-posts-app",
+    technologies: [nest, typescript, swagger],
+    description: "API de gestión de posts",
   },
 ];
