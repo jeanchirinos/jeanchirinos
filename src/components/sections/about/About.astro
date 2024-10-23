@@ -7,11 +7,11 @@ import personalInfo from 'src/data/personalInfo.json'
 ---
 
 <section id='sobre_mi' class='flex scroll-mt-20 flex-col items-center gap-y-12'>
-  <header class='flex items-center gap-x-8 gap-y-4'>
+  <header class='flex items-center gap-x-8 gap-y-4 max-md:flex-col'>
     <Image src={ImgProfile} alt='Jean Chirinos' loading='eager' class='w-48 rounded-full' />
 
     <div class='flex flex-col gap-y-7'>
-      <section>
+      <section class='max-md:text-center'>
         <h2 class='text-3xl font-extrabold text-white' aria-label='Mi nombre'>
           {personalInfo.name}
         </h2>
@@ -19,7 +19,7 @@ import personalInfo from 'src/data/personalInfo.json'
       </section>
       <ul
         aria-label='Tecnologías que domino'
-        class='inline-grid grid-cols-[auto_auto] gap-x-5 gap-y-3 text-lg *:flex *:items-center *:gap-x-1.5'
+        class='flex grid-cols-[auto_auto] flex-wrap gap-x-5 gap-y-3 text-lg *:flex *:items-center *:gap-x-1.5 max-md:justify-center md:inline-grid'
         translate='no'
       >
         <li>
