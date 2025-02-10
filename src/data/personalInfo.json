@@ -4,11 +4,7 @@
   "email": "JeanChirinos17@gmail.com",
   "links": {
     "linkedin": "https://www.linkedin.com/in/jeanchirinos",
-    "github": "https://github.com/jeanchirinos",
-    "resume": {
-      "es": "/CV Jean Chirinos.pdf",
-      "en": "/Resume Jean Chirinos.pdf"
-    }
+    "github": "https://github.com/jeanchirinos"
   },
   "main_technologies": ["nextjs", "react", "typescript", "tailwindcss"]
 }
