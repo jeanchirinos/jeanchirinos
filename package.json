@@ -5,33 +5,30 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "upd": "pnpm up --i --L"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/react": "^3.6.2",
-    "@astrojs/tailwind": "^5.1.2",
-    "@iconify-json/mdi": "^1.2.1",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "@vercel/og": "^0.6.3",
-    "astro": "^4.16.8",
-    "astro-icon": "^1.1.1",
-    "canvas-confetti": "^1.9.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "sharp": "^0.33.5",
-    "tailwindcss": "^3.4.14"
+    "@astrojs/react": "4.2.0",
+    "@iconify-json/mdi": "1.2.3",
+    "@tailwindcss/vite": "4.0.5",
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3",
+    "astro": "5.2.5",
+    "astro-icon": "1.1.5",
+    "canvas-confetti": "1.9.3",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "sharp": "0.33.5",
+    "tailwindcss": "4.0.5"
   },
   "devDependencies": {
-    "@types/canvas-confetti": "^1.6.4",
-    "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.8",
-    "typescript": "^5.6.3"
+    "@types/canvas-confetti": "1.9.0",
+    "prettier": "3.5.0",
+    "prettier-plugin-astro": "0.14.1",
+    "prettier-plugin-tailwindcss": "0.6.11",
+    "typescript": "5.7.3"
   }
 }
