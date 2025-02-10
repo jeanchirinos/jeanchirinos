@@ -1,3 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-nextjs: #000000;
+  --color-react: #61dafb;
+  --color-typescript: #3178c6;
+  --color-tailwindcss: #26c2fe;
+  --color-astro: #ff5d5d;
+  --color-styledcomponents: #ffd459;
+  --color-nest: #ea2845;
+  --color-swagger: #85ea2d;
+}
+
 html {
   color-scheme: dark;
   scroll-behavior: smooth;
