@@ -13,7 +13,7 @@
   "dependencies": {
     "@astrojs/react": "4.2.0",
     "@iconify-json/mdi": "1.2.3",
-    "@tailwindcss/vite": "4.0.5",
+    "@tailwindcss/vite": "4.3.1",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
     "astro": "5.2.5",
@@ -22,7 +22,7 @@
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "sharp": "0.33.5",
-    "tailwindcss": "4.0.5"
+    "tailwindcss": "4.3.1"
   },
   "devDependencies": {
     "@types/canvas-confetti": "1.9.0",
