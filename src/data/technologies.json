@@ -38,5 +38,25 @@
     "id": "swagger",
     "name": "Swagger",
     "short_name": "Swagger"
+  },
+  "claude": {
+    "id": "claude",
+    "name": "Claude",
+    "short_name": "Claude"
+  },
+  "mongo": {
+    "id": "mongo",
+    "name": "MongoDB",
+    "short_name": "MongoDB"
+  },
+  "nodejs": {
+    "id": "nodejs",
+    "name": "Node.js",
+    "short_name": "Node.js"
+  },
+  "nuxt": {
+    "id": "nuxt",
+    "name": "Nuxt",
+    "short_name": "Nuxt"
   }
 }

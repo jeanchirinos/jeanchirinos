@@ -7,8 +7,6 @@ const {
   tailwindcss,
   styledcomponents,
   astro,
-  nest,
-  swagger,
 } = technologies;
 
 export type Project = {
@@ -30,28 +28,12 @@ export const projects: Project[] = [
     description: "Calcula el cobro de luz compartido entre inquilinos",
   },
   {
-    id: "nestjs_posts_app",
-    name: "NesJS Posts App",
-    web: "https://nestjs-posts-app.onrender.com/api-docs",
-    github: "https://github.com/jeanchirinos/nestjs-posts-app",
-    technologies: [nest, typescript, swagger],
-    description: "API de gestión de posts",
-  },
-  {
     id: "gunbound_emotes",
     name: "Gunbound emotes",
     web: "https://emotes-gunbound.vercel.app/",
     github: "https://github.com/jeanchirinos/emotes-gunbound",
     technologies: [react, typescript, styledcomponents],
     description: "Sonidos de emotes del juego Gunbound",
-  },
-  {
-    id: "petcontrado",
-    name: "Petcontrado",
-    web: "https://petcontrado.nijui.site/",
-    github: "https://github.com/jeanchirinos/FindYourPet-Frontend",
-    technologies: [nextjs, typescript, tailwindcss],
-    description: "Encuentra, reporta y adopta mascotas",
   },
   {
     id: "solar_system",

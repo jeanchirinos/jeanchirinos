@@ -26,7 +26,7 @@ export function CopyButton(props: Props) {
     <button
       onClick={copy}
       title="Copiar email"
-      className="relative mx-auto flex items-center gap-x-2 overflow-hidden rounded-lg border border-transparent bg-white px-5 py-2 text-black transition-all hover:border-white hover:bg-transparent hover:text-white focus-visible:ring focus-visible:ring-blue-500"
+      className="relative mx-auto flex items-center gap-x-2 overflow-hidden rounded-lg border border-transparent bg-[#d1d1d1] px-5 py-2 text-black transition-all hover:border-white hover:bg-transparent hover:text-white focus-visible:ring focus-visible:ring-blue-500"
     >
       <div
         className={`${

@@ -3,12 +3,22 @@ import { Icon } from 'astro-icon/components'
 import ExperienceItem from './ExperienceItem.astro'
 import { Image } from 'astro:assets'
 import LogoOngJuventudGlobalizada from '@/assets/images/jobs/JuventudGlobalizada.png'
+import CambiosSeguroLogo from '@/assets/images/jobs/CambioSeguro.webp'
 ---
 
 <section id='experiencia' class='w-[435px] max-w-full scroll-mt-20 space-y-8 self-center'>
   <h4>Experiencia Laboral</h4>
 
   <ul class='space-y-10'>
+    <ExperienceItem
+      job='Desarrollador Frontend/Backend'
+      company='Cambio Seguro'
+      date='2024 - Actualidad'
+      description='Desarrollo de una aplicación web de cambio de divisas'
+    >
+      <Image slot='logo' src={CambiosSeguroLogo} alt='Cambio Seguro' class='rounded-md' width={32} />
+    </ExperienceItem>
+
     <ExperienceItem
       job='Desarrollador Frontend'
       company='Binarial'
@@ -26,5 +36,6 @@ import LogoOngJuventudGlobalizada from '@/assets/images/jobs/JuventudGlobalizada
     >
       <Image slot='logo' src={LogoOngJuventudGlobalizada} alt='ONG Juventud Globalizada' />
     </ExperienceItem>
+
   </ul>
 </section>

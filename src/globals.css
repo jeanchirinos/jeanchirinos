@@ -9,6 +9,10 @@
   --color-styledcomponents: #ffd459;
   --color-nest: #ea2845;
   --color-swagger: #85ea2d;
+  --color-claude: #a1a1a1;
+  --color-mongo: #47a248;
+  --color-nodejs: #339933;
+  --color-nuxt: #00c58e;
 }
 
 html {

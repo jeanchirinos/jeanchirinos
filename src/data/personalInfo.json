@@ -1,10 +1,10 @@
 {
   "name": "Jean Chirinos",
-  "occupation": "Desarrollador Frontend",
-  "email": "JeanChirinos17@gmail.com",
+  "occupation": "Desarrollador Full Stack",
+  "email": "jeanchirinos17@gmail.com",
   "links": {
     "linkedin": "https://www.linkedin.com/in/jeanchirinos",
     "github": "https://github.com/jeanchirinos"
   },
-  "main_technologies": ["nextjs", "react", "typescript", "tailwindcss"]
+  "main_technologies": ["nextjs", "react", "typescript", "tailwindcss", "claude"]
 }
