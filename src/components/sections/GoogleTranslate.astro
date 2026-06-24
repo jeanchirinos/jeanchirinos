@@ -59,7 +59,12 @@ cb=googleTranslateElementInit'></script>
 
   /* Styles the google translate dropdown */
   .goog-te-combo {
-    @apply !m-0 rounded-md py-1 pl-0.5 text-white;
+    @apply !m-0 rounded-md py-1 pl-0.5 bg-neutral-800 ;
+    color: var(--color-neutral-300)
+  }
+
+  .goog-te-combo option {
+    @apply bg-neutral-800 ;
   }
 
   /* Hides google translate tooltips when a language is selected and text is being hovered */
